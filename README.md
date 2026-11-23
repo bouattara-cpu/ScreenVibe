@@ -1,27 +1,19 @@
-# ScreenVibe — Movies & Series Explorer
+# ScreenVibe
 
-ScreenVibe is a responsive web application for searching, filtering, and sorting movies and series using the **OMDb API**. Built with vanilla HTML5, CSS3, and JavaScript, it allows users to save their OMDb API key locally in the browser and explore results smoothly.
+**ScreenVibe** is a web application built with HTML, CSS, and JavaScript for discovering, searching, and tracking movies and books using external APIs. Developed for the African Leadership University (ALU) *Playing Around with APIs* project, it is deployed across a two-tier load-balanced Nginx infrastructure.
 
-## Features
+## Overview & Features
 
-- **API Key Management (`localStorage`)**: Enter and save an OMDb API key directly in the interface, with validation when the input is empty.
-- **Instant Search**: Search for movies and series by title using the search button or the `Enter` key.
-- **Filtering & Sorting**: Filter results by type (`All`, `movie`, `series`, etc.) and sort displayed items.
-- **Error & Empty State Handling**: Clear feedback when no API key is provided, when no matching movie/series is found, or when a network/API error occurs.
-- **Responsive UI**: Styled with custom CSS3 and the **Poppins** font.
-
-## Tech Stack
-
-- **HTML5** (`index.html`)
-- **CSS3** (`style.css`)
-- **JavaScript (ES6+)** (`app.js`)
-- **OMDb API** (`https://www.omdbapi.com/`)
+* **API-Driven Discovery**: Fetch, search, and browse movies and books dynamically through external APIs.
+* **Interactive Filtering & Tracking**: Filter results, inspect details, and track titles in a responsive user interface.
+* **High-Availability Deployment**: Served over Nginx across two web servers (`7385-web-01` and `7385-web-02`) behind a reverse proxy load balancer (`7385-lb-01`).
 
 ## Project Structure
 
 ```text
 ScreenVibe/
-├── index.html              # Main application markup and layout
-├── style.css               # Styling and responsive design
-├── app.js                  # API requests, localStorage handling, filtering, sorting, and DOM rendering
-└── codepause-ScreenVibe.json # Activity/authorship tracking export
+├── index.html      # Application structure and UI containers
+├── style.css       # Layout, styling, and responsive design
+├── app.js          # API requests, search/filter state, and DOM rendering
+├── .gitignore      # Ignores sensitive/system/log files (.env, .DS_Store, Thumbs.db, *.log)
+└── README.md       # Project documentation and infrastructure details
